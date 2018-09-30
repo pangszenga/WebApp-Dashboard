@@ -74,16 +74,13 @@ document.querySelectorAll(".switch").forEach(function(theSwitch) {
 
 function handleClickEvent(e) {
 
-    const switchCircle1 = e.target.querySelector('#switchCircle1');
-    const switchCircle2 = e.target.querySelector('#switchCircle2');
+    const switchCircle = e.target.querySelector('#switchCircle');
 
     if (e.target.getAttribute("aria-checked") == "true") {
-        switchCircle1.style.left = "-21px";
-        switchCircle2.style.left = "-21px";
+        switchCircle.style.left = "-21px";
         e.target.setAttribute("aria-checked", "false");
     } else if (e.target.getAttribute("aria-checked") == "false") {
-        switchCircle1.style.left = "29px";
-        switchCircle2.style.left = "29px";
+        switchCircle.style.left = "29px";
         e.target.setAttribute("aria-checked", "true");
     }
 };
