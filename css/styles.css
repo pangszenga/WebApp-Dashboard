@@ -1,0 +1,549 @@
+* {
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+  color: inherit;
+}
+
+li {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  display: grid;
+  grid-template-areas:
+    "head head head head head"
+    "nav content content content content"
+    "nav content content content content"
+  ;
+}
+
+header {
+  display: inline-flex;
+  flex-direction: row;
+  font-size: 1em;
+  color: white;
+  background: #7349c1;
+  grid-area: head;
+}
+
+/* Why is header element not working in grid */
+header ul {
+  display: inline-flex;
+}
+
+header li {
+  padding: .5em;
+}
+header h1 {
+  margin: 1.4em 1em;
+  flex-grow: 1;
+}
+
+header .bell {
+  margin-top: 1em;
+  padding: 1em;
+}
+
+header .avatar {
+  border-radius: 50%;
+  padding: 1em;
+  height: 25vh;
+  width: 25vh;
+}
+
+header p {
+  font-size: 1em;
+  text-align: right;
+  align-self: center;
+  padding: .6em .5em;
+  margin-top: 2em;
+  margin-right: 1em;
+}
+
+/* Alert */
+.alert {
+  margin-top: 1em;
+  margin-left: .5em;
+  background: rgb(63, 191, 191);
+  color: #fff;
+  border-radius: 5px;
+  padding: 1em;
+  width: 100%;
+  text-align: center;
+}
+/* Navigation items */
+
+.nav {
+  background: #54368c;
+  padding-right: 1.5em;
+  display: flex;
+  flex-direction: column;
+  grid-area: nav;
+}
+
+.icon {
+  height: 7vh;
+  margin: .5em .5em .5em 0;
+}
+
+.dashboardTab {
+  grid-area: content;
+  margin-left: 1.5em;
+  margin-right: 1.5em;
+}
+
+.dashboardTab h1 {
+  display: inline-block;
+  text-align: center;
+  width: 100%;
+  margin-right: auto;
+}
+
+/* search bar */
+#search {
+  width: 100%;
+  display: inline-block;
+  margin-top: 1em;
+  padding: 1em;
+  border: solid 2px rgb(63, 191, 191);
+  border-radius: 5px;
+}
+
+
+/* charts */
+.traffic {
+  display: flex;
+  flex-direction: column;
+  padding: 2em;
+}
+
+
+/* social widgets */
+
+.socialCard ul {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.socialCard li {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 5em 5em 5em 1em;
+  padding: 2em 2em 1em 2em;
+  border-radius: 10px;
+  border: #b6aec4 2px solid;
+}
+
+.socialCard .icon {
+  height: 56.693px;
+  width: 56.693px;
+  background:#7349c1;
+  border-radius: 50%;
+  padding: 1em;
+  float: left;
+}
+
+.socialCard li p {
+  color: #797e84;
+  font-size: 1em;
+  margin-top: 2em;
+  margin-left: 3em;
+}
+
+.socialCard li p:last-child {
+  font-size: 2em;
+  margin-left: 2.1em;
+  margin-top: 1em;
+
+}
+
+
+/* Members list */
+.membersLi,
+.visitsLi  {
+  border-radius: 5px;
+  border:#b6aec4 2px solid;
+  padding: 2em;
+  width: 100%;
+}
+
+.membersLi img,
+.visitsLi img {
+  border-radius: 50%;
+  width: 20%;
+}
+
+.membersLi {
+  float: left;
+}
+
+.visitsLi {
+  float: right;
+}
+
+.membersLi li {
+  display: grid;
+  grid-template-areas:
+  "img p pl"
+  "img a .";
+  margin-bottom: 1em;
+}
+
+.membersLi li img {
+  height: 10vh;
+  width: 10vh;
+  grid-area: img;
+}
+
+.membersLi li p:first-child {
+  grid-area: p;
+}
+
+.membersLi li a {
+  grid-area: a;
+}
+
+.membersLi li p:last-child {
+  grid-area: pl;
+  color: #b6aec4 ;
+}
+
+.membersLi input,
+.membersLi textarea {
+  border-radius: 5px;
+  border:#b6aec4 2px solid;
+  margin-bottom: 1em;
+  width: 100%;
+  padding: 1em;
+}
+
+.membersLi button {
+  width: 100%;
+  background: rgba(56, 191, 191, .8);
+  color: white;
+  border: solid 2px #b6aec4;
+  border-radius: 5px;
+  padding: 1em;
+
+}
+.visitsLi li {
+  display: grid;
+  grid-template-areas:
+  "img p"
+  "img span";
+  margin-bottom: 1em;
+}
+
+.visitsLi li img {
+  height: 10vh;
+  width: 10vh;
+  grid-area: img;
+}
+
+.visitsLi li p {
+  grid-area: p;
+}
+
+.visitsLi li span {
+  grid-area: span;
+  color: #b6aec4 ;
+}
+
+.settings div {
+  display: flex;
+  flex-direction: row;
+}
+
+
+button.switch {
+  border-radius: 30px;
+  border: 1px solid #7f7f7f;
+  display: inline-flex;
+  padding: 2px;
+  background: rgb(63, 191, 191);
+  font-size: 0.9em;
+  margin-right: 20px;
+  margin-bottom: 1em;
+}
+
+button.switch span {
+    padding: 5px 0;
+    color: white;
+    display: inline-block;
+    margin: auto 0;
+    font-weight: 600;
+}
+
+button.switch #switchCircle {
+    border-radius: 50%;
+    width: 29px;
+    height: 29px;
+    background: white;
+    position: relative;
+    left: 29px;
+    transition: 0.1s ease;
+}
+
+label.switch {
+  margin-left: 20px;
+  margin-right: auto;
+  color: #7f7f7f;
+  font-size: 0.8em;
+  cursor: pointer;
+}
+
+
+select {
+  width: 100%;
+  max-height: 28px;
+  flex: 1;
+  align-self: center;
+  border-radius: 5px;
+  color: #7f7f7f;
+  text-align: left;
+  margin-top: 1em;
+  padding: 1em;
+}
+
+.settings button {
+  align-self: center;
+}
+
+#cancel {
+  background: white;
+  border-style: none;
+}
+
+#save {
+  width: 40%;
+  background: rgba(56, 191, 191, .8);
+  color: white;
+  border: solid 2px #b6aec4;
+  border-radius: 5px;
+  padding: 1em;
+}
+
+.settings :last-child {
+  justify-content: center;
+}
+.settings :last-child button {
+  margin: 1em;
+  padding: .8em;
+}
+
+[disabled] {
+  color: #7f7f7f;
+}
+
+
+@media (min-width: 768px) {
+
+  header h1 {
+    margin: 1.4em 1em;
+    flex-grow: 3;
+  }
+
+  header .bell {
+    height: 7vh;
+    padding: .5em;
+    margin-right: 1em;
+  }
+
+  header .avatar {
+    height: 7vh;
+    border-radius: 50%;
+    padding: .5em;
+    margin-left: 1em;
+
+  }
+  .dashboardTab h1 {
+    display: inline-block;
+    width: 100%;
+    margin-left: 1em;
+    margin-right: auto;
+  }
+
+  .icon {
+    height: 7vh;
+    margin: .5em .5em .5em 0;
+    padding: .5em;
+  }
+
+  #search {
+    display: inline-block;
+    float: right;
+    margin-top: 1em;
+    padding: 1em;
+    border: solid 2px rgb(63, 191, 191);
+    border-radius: 5px;
+  }
+
+  .traffic {
+    display: flex;
+    flex-direction: column;
+    padding: 2em;
+  }
+
+  .socialCard ul {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .socialCard li {
+    height: 60vh;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 2em 2em 2em 1em;
+    padding: 2em 2em 1em 2em;
+    border-radius: 10px;
+    border: #b6aec4 2px solid;
+  }
+
+  .socialCard .icon {
+    height: 56.693px;
+    width: 56.693px;
+    background:#7349c1;
+    border-radius: 50%;
+    padding: 1em;
+    float: left;
+  }
+
+  .socialCard li p {
+    color: #797e84;
+    font-size: 1em;
+    margin-top: 2em;
+    margin-left: 3em;
+  }
+
+  .socialCard li p:last-child {
+    font-size: 2em;
+    margin-left: 2.1em;
+    margin-top: 1em;
+
+  }
+
+  .membersLi,
+  .visitsLi  {
+    border-radius: 5px;
+    border:#b6aec4 2px solid;
+    padding: 2em;
+    width: 46%;
+  }
+
+  .membersLi button {
+    width: 100%;
+    background: rgba(56, 191, 191, .8);
+    color: white;
+    border: solid 2px #b6aec4;
+    border-radius: 5px;
+    padding: 1em;
+    margin-top: 4.1em;
+    align-self: flex-end;
+  }
+
+}
+
+@media (min-width: 1024px){
+  header {
+    display: inline-flex;
+  }
+
+  header h1 {
+    width: 50%;
+  }
+
+  header ul {
+    width: 50%;
+  }
+  header li:nth-child(2n) {
+    border-right: solid 1px white;
+  }
+
+  header .bell {
+    width: 20vw;
+    transition: 1s ease-in-out;
+  }
+
+  header .bell:hover {
+    transform: rotate(100deg);
+  }
+
+  header .avatar {
+
+    border-radius: 50%;
+    padding: 1em;
+    height: 10vh;
+    width: 6vw;
+  }
+
+  header p {
+    font-size: 1em;
+  }
+
+
+  .dashboardTab h1 {
+    display: inline-block;
+    margin-left: 0;
+    padding-left: 0;
+    align-self: flex-start;
+    width: 20%;
+  }
+
+  #search {
+    width: 20%;
+    display: inline-block;
+    margin-top: 1em;
+    padding: 1em;
+    border: solid 2px rgb(63, 191, 191);
+    border-radius: 5px;
+  }
+
+  .traffic {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .chartLine {
+    width: 100%;
+  }
+
+  .chartBar {
+    width: 40%;
+    margin-right: 10em;
+  }
+
+  .chartDoughnut {
+    width: 40%;
+  }
+
+  .socialCard .icon {
+    height: 10vh;
+    width: 5vw;
+  }
+
+  .membersLi button {
+    width: 100%;
+    background: rgba(56, 191, 191, .8);
+    color: white;
+    border: solid 2px #b6aec4;
+    border-radius: 5px;
+    padding: 1em;
+    align-self: flex-end;
+  }
+
+  .settings :last-child button {
+    margin: 4em;
+    padding: .8em;
+  }
+}
