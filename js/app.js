@@ -74,7 +74,7 @@ document.querySelectorAll(".switch").forEach(function(theSwitch) {
 
 function handleClickEvent(e) {
 
-    const switchCircle = e.target.querySelector('#switchCircle');
+    const switchCircle = e.target.querySelector('.switchCircle');
 
     if (e.target.getAttribute("aria-checked") == "true") {
         switchCircle.style.left = "-21px";

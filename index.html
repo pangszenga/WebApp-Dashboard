@@ -94,7 +94,7 @@
             </svg>
           </li>
           <li>
-            <svg class="settings icon" version="1.1" id="Line_6" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+            <svg class="setting icon" version="1.1" id="Line_6" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
             	 viewBox="0 0 32 32" style="enable-background:new 0 0 32 32;" xml:space="preserve">
             <style type="text/css">
             	.st0{fill:#FFFFFF;}
@@ -192,97 +192,111 @@
         </div>
       </div>
 
-
-      <div class="membersLi list">
-        <h2>New Members</h2>
-        <ul>
-          <li>
-            <img src="images/member-1.jpg" alt="member 1">
-            <p>member 1</p>
-            <a href="mailto:member1@example.com">member1@example.com</a>
-            <p  >dd/mm/yyyy</p>
-          </li>
-          <li>
-            <img src="images/member-2.jpg" alt="member 2">
-            <p>member 2</p>
-            <a href="mailto:member2@example.com">member2@example.com</a>
-            <p  >dd/mm/yyyy</p>
-          </li>
-          <li>
-            <img src="images/member-3.jpg" alt="member 3">
-            <p>member 3</p>
-            <a href="mailto:member3@example.com">member3@example.com</a>
-            <p  >dd/mm/yyyy</p>
-          </li>
-          <li>
-            <p>member 4</p>
-            <a href="mailto:member4@example.com">member4@example.com</a>
-            <p  >dd/mm/yyyy</p>
-          </li>
-        </ul>
-        <form class="messageUser" action="index.html" method="post">
-          <label for="user">
-            <input id="user" name="search" placeholder="Start typing here" type="text" data-list=".list">
-          </label>
-          <label class="messageUser">
-            <textarea id="message" name="message" rows="8" cols="50" placeholder="Message"></textarea>
-          </label>
-          <button id="submit" type="button" name="button">Submit</button>
-        </form>
-
-      </div>
-
-      <div class="visitsLi">
-        <h2>Recent Activity</h2>
-        <ul>
-          <li>
-            <img src="images/member-1.jpg" alt="member 1">
-            <p>Member 1 just commented on YourApp</p>
-            <span   >4 hours ago</span>
-          </li>
-          <li>
-            <img src="images/member-2.jpg" alt="member 2">
-            <p>Member 2 just posted on YourApp</p>
-            <span   >4 hours ago</span>
-          </li>
-          <li>
-            <img src="images/member-3.jpg" alt="member 3">
-            <p>Member 3 just commented on YourApp</p>
-            <span   >4 hours ago</span>
-          </li>
-          <li>
-            <img src="images/member-4.jpg" alt="member 4">
-            <p>Member 4 just posted on YourApp</p>
-            <span   >4 hours ago</span>
-          </li>
-        </ul>
-        <div class="settings">
-            <h3>Settings</h3>
-            <div>
-                <label for="emailNotifications" class="switch">Send Email Notifications</label>
-                <button name="switch" role="switch" aria-checked="true" id="emailNotifications" type="button" class="switch">
-                    <span class="on">ON</span>
-                    <span id="switchCircle"></span>
-                    <span class="off">OFF</span>
-                </button>
+        <div class="left">
+          <div class="membersLi list">
+            <h2>New Members</h2>
+            <ul>
+              <li>
+                <img src="images/member-1.jpg" alt="member 1">
+                <p>member 1</p>
+                <a href="mailto:member1@example.com">member1@example.com</a>
+                <p  >dd/mm/yyyy</p>
+              </li>
+              <li>
+                <img src="images/member-2.jpg" alt="member 2">
+                <p>member 2</p>
+                <a href="mailto:member2@example.com">member2@example.com</a>
+                <p  >dd/mm/yyyy</p>
+              </li>
+              <li>
+                <img src="images/member-3.jpg" alt="member 3">
+                <p>member 3</p>
+                <a href="mailto:member3@example.com">member3@example.com</a>
+                <p  >dd/mm/yyyy</p>
+              </li>
+              <li>
+                <img src="images/member-4.jpg" alt="member 4">
+                <p>member 4</p>
+                <a href="mailto:member4@example.com">member4@example.com</a>
+                <p >dd/mm/yyyy</p>
+              </li>
+            </ul>
             </div>
-            <div>
-                <label for="publicProfile" class="switch">Set Profile to Public</label>
-                <button type="button"  role="switch" aria-checked="true" id="publicProfile" class="switch">
-                    <span class="on">ON</span>
-                    <span id="switchCircle">C</span>
-                    <span class="off">OFF</span>
-                </button>
+
+            <div class="form">
+              <h3>Recent Activity</h3>
+              <form class="messageUser" action="index.html" method="post">
+                <label for="user">
+                  <input id="user" name="search" placeholder="Start typing here" type="text" data-list=".list">
+                </label>
+                <label class="messageUser">
+                  <textarea id="message" name="message" rows="8" cols="50" placeholder="Message"></textarea>
+                </label>
+                <button id="submit" type="button" name="button">Submit</button>
+              </form>
             </div>
-            <select name="timeZone" id="timeZone">
-                <option value="select" disabled selected>Select Timezone</option>
-            </select>
-            <div>
-                <button id="save" type="submit">Save</button>
-                <button id="cancel" type="submit">Cancel</button>
-            </div>
+
         </div>
-      </div>
+
+          <div class="right">
+            <div class="visitsLi">
+              <h2>Recent Activity</h2>
+              <ul>
+                <li>
+                  <img src="images/member-1.jpg" alt="member 1">
+                  <p>Member 1 just commented on YourApp</p>
+                  <span>4 hours ago</span>
+                </li>
+                <li>
+                  <img src="images/member-2.jpg" alt="member 2">
+                  <p>Member 2 just posted on YourApp</p>
+                  <span>4 hours ago</span>
+                </li>
+                <li>
+                  <img src="images/member-3.jpg" alt="member 3">
+                  <p>Member 3 just commented on YourApp</p>
+                  <span>4 hours ago</span>
+                </li>
+                <li>
+                  <img src="images/member-4.jpg" alt="member 4">
+                  <p>Member 4 just posted on YourApp</p>
+                  <span>4 hours ago</span>
+                </li>
+              </ul>
+              </div>
+
+              <div class="settings">
+                  <h3>Settings</h3>
+                  <div>
+                      <label for="emailNotifications" class="switch">Send Email Notifications</label>
+                      <button name="switch" role="switch" aria-checked="true" id="emailNotifications" type="button" class="switch">
+                          <span class="on">ON</span>
+                          <span class="switchCircle"></span>
+                          <span class="off">OFF</span>
+                      </button>
+                  </div>
+                  <div>
+                      <label for="publicProfile" class="switch">Set Profile to Public</label>
+                      <button type="button"  role="switch" aria-checked="true" id="publicProfile" class="switch">
+                          <span class="on">ON</span>
+                          <span class="switchCircle">C</span>
+                          <span class="off">OFF</span>
+                      </button>
+                  </div>
+                  <select name="timeZone" id="timeZone">
+                      <option value="select" disabled selected>Select Timezone</option>
+                  </select>
+                  <div>
+                      <button id="save" type="submit">Save</button>
+                      <button id="cancel" type="submit">Cancel</button>
+                  </div>
+              </div>
+          </div>
+
+
+
+
+
     </div>
     </div>
     <script src="HideSeek/jquery-1.9.1.min.js"></script>

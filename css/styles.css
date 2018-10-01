@@ -90,7 +90,6 @@ header p {
   height: 7vh;
   margin: .5em .5em .5em 0;
 }
-
 .dashboardTab {
   grid-area: content;
   margin-left: 1.5em;
@@ -128,7 +127,6 @@ header p {
 .socialCard ul {
   display: inline-flex;
   flex-direction: column;
-  align-items: center;
   justify-content: space-between;
 }
 
@@ -168,25 +166,20 @@ header p {
 
 /* Members list */
 .membersLi,
-.visitsLi  {
+.visitsLi,
+.form,
+.settings  {
   border-radius: 5px;
   border:#b6aec4 2px solid;
   padding: 2em;
   width: 100%;
+  margin: 1em;
 }
 
 .membersLi img,
 .visitsLi img {
   border-radius: 50%;
   width: 20%;
-}
-
-.membersLi {
-  float: left;
-}
-
-.visitsLi {
-  float: right;
 }
 
 .membersLi li {
@@ -216,14 +209,6 @@ header p {
   color: #b6aec4 ;
 }
 
-.membersLi input,
-.membersLi textarea {
-  border-radius: 5px;
-  border:#b6aec4 2px solid;
-  margin-bottom: 1em;
-  width: 100%;
-  padding: 1em;
-}
 
 .membersLi button {
   width: 100%;
@@ -234,6 +219,7 @@ header p {
   padding: 1em;
 
 }
+
 .visitsLi li {
   display: grid;
   grid-template-areas:
@@ -261,7 +247,23 @@ header p {
   display: flex;
   flex-direction: row;
 }
+.form input,
+.form textarea {
+  border-radius: 5px;
+  width: 100%;
+  border: 1px solid #7f7f7f;
+  padding: 1em;
+  margin-bottom: .5em;
 
+}
+.form button {
+  align-self: center;
+  background: rgb(63, 191, 191);
+  border-radius: 5px;
+  color: white;
+  padding: 1em;
+  width: 100%;
+}
 
 button.switch {
   border-radius: 30px;
@@ -282,7 +284,7 @@ button.switch span {
     font-weight: 600;
 }
 
-button.switch #switchCircle {
+button.switch .switchCircle {
     border-radius: 50%;
     width: 29px;
     height: 29px;
@@ -400,7 +402,8 @@ select {
   }
 
   .socialCard li {
-    height: 60vh;
+    height: 30vh;
+    width: 30vh;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -430,16 +433,28 @@ select {
     font-size: 2em;
     margin-left: 2.1em;
     margin-top: 1em;
+  }
 
+  .left {
+    float: left;
+    width: 46%;
+  }
+
+  .right {
+    float: right;
+    width: 46%;
   }
 
   .membersLi,
-  .visitsLi  {
+  .visitsLi,
+  .form,
+  .settings {
     border-radius: 5px;
     border:#b6aec4 2px solid;
     padding: 2em;
-    width: 46%;
+    overflow: auto;
   }
+
 
   .membersLi button {
     width: 100%;
@@ -451,6 +466,8 @@ select {
     margin-top: 4.1em;
     align-self: flex-end;
   }
+
+
 
 }
 
@@ -533,8 +550,14 @@ select {
     width: 5vw;
   }
 
+  .socialCard {
+    padding: 1em;
+    height: 2%;
+  }
+
   .membersLi button {
     width: 100%;
+    margin-bottom: 2em;
     background: rgba(56, 191, 191, .8);
     color: white;
     border: solid 2px #b6aec4;
@@ -544,7 +567,7 @@ select {
   }
 
   .settings :last-child button {
-    margin: 4em;
+    margin: 1em 1em 0 1em;
     padding: .8em;
   }
 }
