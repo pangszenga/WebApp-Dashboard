@@ -1,11 +1,13 @@
 * {
   box-sizing: border-box;
-  font-family:  'Heebo', sans-serif;
+  font-family: 'Rubik', sans-serif;
+  letter-spacing: 1px;
   color: inherit;
 }
 
 body {
   margin: 0;
+  background-color: #ebeaec;
 }
 
 li {
@@ -16,80 +18,123 @@ a {
   text-decoration: none;
 }
 
-/* .container {
-  display: grid;
-} */
-
 header {
+  position: absolute;
   display: flex;
   flex-direction: row;
-  background-color:  rgba(84, 84, 87, 0.75);
   width: 100%;
-  justify-content: space-between;
-  box-shadow:  0 4px 2px -2px gray;
+  justify-content: flex-end;
 }
 
-header .avatar {
-  height: 5em;
-  border-radius: 50%;
-
-}
-
-header h1 {
-  color: white;
-  margin: 1em;
+.border-input {
+  border-style: none;
+  box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset
 }
 
 .your-info {
   display: flex;
+  margin-top: 1em;
   flex-direction: row;
-  justify-content: space-evenly;
-  color: white;
+  justify-content: space-between;
+  color: rgba(84, 84, 87, 0.75);;
   vertical-align: middle;
 }
 
-.your-info div {
-  margin: .5em;
-}
-
-.your-info .img{
-  margin-right: 1em;
-}
-
-.your-info h2{
+.your-info p {
   text-align: center;
 }
 
+.your-info img{
+  height: 3em;
+  border-radius: 50%;
+  margin-right: 1em;
+}
+
+.your-info .username {
+  margin-right: 1em;
+}
+
+
 .container {
   display: flex; 
-  justify-content: space-evenly;
+  justify-content: space-around;
+}
+
+.alert {
+  border: 1.5px rgb(95, 175, 95) solid;
+  border-radius: 3px;
+  background-color: rgb(172, 241, 172);
+  color: rgb(95, 175, 95);
+  padding: 1em;
+  margin-bottom: 2em;
 }
 /* Navigation items */
 
 .nav {
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100vh;
   background:rgba(84, 84, 87, 0.75);
-  padding-right: 1.5em;
   width: 12%;
   display: flex;
   flex-direction: column;
 }
 
-.icon {
-  height: 7vh;
-  margin: .5em .5em .5em 0;
-}
-.dashboardTab {
-  width: 88%;
-  margin: 1em;
-  padding:1em;
+.appName h1 {
+  font-size: larger;
+  margin-top: 2em;
+  padding-left: 1.2em;
+  color: white;
+  text-align: left;
 }
 
-.dashboardTab h1 {
-  display: inline-block;
+.item {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  padding: .4em 1em;
   text-align: center;
-  width: 100%;
-  margin-right: auto;
+  color: white;
 }
+
+.item svg,
+.item p {
+  margin-left: .5em;
+  vertical-align: middle;
+}
+
+.svg-icon {
+  width: 1.2em;
+  height: 1.2em;
+}
+
+.svg-icon path,
+.svg-icon polygon,
+.svg-icon rect {
+  fill: white;
+}
+
+.panels-container {
+  width: 70%;
+  margin: 1em 1em 1em 10em;
+}
+
+.title{
+  width: 100%;
+  color:rgba(84, 84, 87, 0.75);
+  text-shadow: 0px 1px 1px #c0bdbd;
+  font-weight: lighter;
+}
+
+.panel {
+  padding:3em;
+  background-color: white;
+  border-radius: 5px;
+  box-shadow:0 4px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset
+}
+
 
 /* search bar */
 #search {
@@ -97,18 +142,20 @@ header h1 {
   display: inline-block;
   margin-top: 1em;
   padding: 1em;
-  border: solid 2px rgb(63, 191, 191);
   border-radius: 5px;
 }
 
 
 /* charts */
 .traffic {
-  display: flex;
-  flex-direction: column;
-  padding: 2em;
+  display: grid;
+  grid-template-areas: "line line";
+  grid-gap: 2em;
 }
 
+.chartLine {
+  grid-area: line;
+}
 
 /* social widgets */
 
@@ -125,7 +172,8 @@ header h1 {
   margin: 5em 5em 5em 1em;
   padding: 2em 2em 1em 2em;
   border-radius: 8px;
-  border: #8a8f96 2px solid;
+  background-color: white;
+  box-shadow:0 4px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
 }
 
 
@@ -134,7 +182,6 @@ header h1 {
 }
 
 .socialCard li p {
-  color: #797e84;
   font-size: 1em;
   margin-top: 2em;
   margin-left: 3em;
@@ -147,17 +194,16 @@ header h1 {
 
 }
 
-
 /* Members list */
+.members-container{
+  margin: 1em;
+}
+
 .membersLi,
 .visitsLi,
-.form,
-.settings  {
-  border-radius: 5px;
-  border:#b6aec4 2px solid;
+.form {
   padding: 2em;
-  width: 100%;
-  margin: 1em;
+  margin-bottom: 2em;
 }
 
 .membersLi img,
@@ -201,7 +247,6 @@ header h1 {
   border: solid 2px #b6aec4;
   border-radius: 5px;
   padding: 1em;
-
 }
 
 .visitsLi li {
@@ -231,14 +276,12 @@ header h1 {
   display: flex;
   flex-direction: row;
 }
+
 .form input,
 .form textarea {
-  border-radius: 5px;
   width: 100%;
-  border: 1px solid #7f7f7f;
   padding: 1em;
-  margin-bottom: .5em;
-
+  margin-bottom: 2em;
 }
 .form button {
   align-self: center;

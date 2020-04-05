@@ -2,7 +2,7 @@
 const dashboardTab = document.querySelector('.dashboardTab');
 const alertMessage = document.createElement('li');
 alertMessage.className = 'alert';
-alertMessage.textContent = 'Welcome, please click to remove this';
+alertMessage.textContent = 'Welcome to your dashboard! Click to remove this';
 
 
 dashboardTab.insertBefore(alertMessage, dashboardTab.firstChild);
